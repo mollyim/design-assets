@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Molly Color Mapping</title>
+  <style>
+    body {
+      background-color: white;
+      padding: 20px;
+    }
+
+    td {
+      padding: 10px;
+    }
+
+    .color-box {
+      width: 50px;
+      height: 50px;
+    }
+
+    #colorSliderContainer {
+      margin-bottom: 20px;
+    }
+
+    input[type="range"] {
+      width: 150px;
+    }
+  </style>
+</head>
+<body>
+  <div id="colorSliderContainer">
+    <label for="colorSlider">Background Color:</label>
+    <input type="range" id="colorSlider" min="0" max="1" step="0.01" value="0" oninput="changeBackgroundColor(this.value)">
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Signal</th>
+        <th>Molly</th>
+        <th>Signal</th>
+        <th>Molly</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody">
+    </tbody>
+  </table>
+
+  <script>
+    var colorMap = {
+      "core_ultramarine": ["#2C6BED", "#7B68EE"],
+      "core_ultramarine_light": ["#6191F3", "#8F7FF1"],
+      "core_ultramarine_light_50": ["#B6C5FA", "#BDB4F7"],
+      "core_ultramarine_dark": ["#1851B4", "#4C33a8"],
+      "core_ultramarine_icon": ["#3A76f0", "#7663F0"],
+
+      "signal_light_colorPrimary": ["#2C58C3", "#523DBD"],
+      "signal_light_colorPrimaryContainer": ["#D2DFFB", "#D8D2FA"],
+      "signal_light_colorSecondary": ["#586071", "#59576E"],
+      "signal_light_colorSecondaryContainer": ["#DCE5F9", "#DFDCF7"],
+      "signal_light_colorSurface": ["#FBFCFF", "#FBFAFF"],
+      "signal_light_colorSurfaceVariant": ["#E7EBF3", "#E7E6F2"],
+      "signal_light_colorBackground": ["#FBFCFF", "#FBFAFF"],
+      "signal_light_colorError": ["#BA1B1B", "#BA1B1B"],
+      "signal_light_colorErrorContainer": ["#FFDAD4", "#FFDAD4"],
+      "signal_light_colorOnPrimaryContainer": ["#051845", "#110647"],
+      "signal_light_colorOnSecondaryContainer": ["#151D2C", "#18152B"],
+      "signal_light_colorOnSurface": ["#1B1B1D", "#171719"],
+      "signal_light_colorOnSurfaceVariant": ["#545863", "#585563"],
+      "signal_light_colorOnSurfaceVariant1": ["#BBBFC8", "#BDBBC8"],
+      "signal_light_colorOnBackground": ["#1B1D1D", "#171719"],
+      "signal_light_colorOutline": ["#808389", "#82808A"],
+      "signal_light_colorSurface1": ["#F2F5F9", "#F3F2FA"],
+      "signal_light_colorSurface2": ["#EDF0F6", "#EDEBF5"],
+      "signal_light_colorSurface3": ["#E8ECF4", "#EAE9F5"],
+      "signal_light_colorSurface4": ["#E6EAF3", "#E8E6F2"],
+      "signal_light_colorSurface5": ["#E3E7F1", "#E7E4F2"],
+
+      "signal_dark_colorPrimary": ["#B6C5FA", "#C2BDFC"],
+      "signal_dark_colorPrimaryContainer": ["#464B5C", "#4A485E"],
+      "signal_dark_colorSecondary": ["#C1C6DD", "#C8C5E0"],
+      "signal_dark_colorSecondaryContainer": ["#414659", "#46445C"],
+      "signal_dark_colorSurface": ["#1B1C1F", "#171719"],
+      "signal_dark_colorSurfaceVariant": ["#303133", "#303033"],
+      "signal_dark_colorBackground": ["#1B1C1F", "#171719"],
+      "signal_dark_colorError": ["#FFB4A9", "#FFB4A9"],
+      "signal_dark_colorErrorContainer": ["#930006", "#930006"],
+      "signal_dark_colorOnPrimary": ["#1E2438", "#23203B"],
+      "signal_dark_colorOnPrimaryContainer": ["#DBE1FC", "#DDDCFC"],
+      "signal_dark_colorOnSecondary": ["#2A3042", "#2C2A42"],
+      "signal_dark_colorOnSecondaryContainer": ["#DCE1F9", "#DEDCFA"],
+      "signal_dark_colorOnSurface": ["#E2E1E5", "#E3E1E6"],
+      "signal_dark_colorOnSurfaceVariant": ["#BEBFC5", "#BEBCC4"],
+      "signal_dark_colorOnSurfaceVariant1": ["#4D5059", "#504D59"],
+      "signal_dark_colorOnBackground": ["#E2E1E5", "#E3E1E6"],
+      "signal_dark_colorOutline": ["#5C5E65", "#5D5D66"],
+      "signal_dark_colorSurface1": ["#23242A", "#222229"],
+      "signal_dark_colorSurface2": ["#272A31", "#272730"],
+      "signal_dark_colorSurface3": ["#2C2F37", "#2E2D38"],
+      "signal_dark_colorSurface4": ["#2E3039", "#2F2D38"],
+      "signal_dark_colorSurface5": ["#31343E", "#31303D"],
+    };
+
+
+    var tableBody = document.getElementById('tableBody');
+
+    for (var colorName in colorMap) {
+      var mapping = colorMap[colorName];
+      var colorRow = document.createElement('tr');
+      var colorNameCell = document.createElement("td");
+      var hex1Cell = document.createElement("td");
+      var hex2Cell = document.createElement("td");
+      var color1Cell = document.createElement("td");
+      var color2Cell = document.createElement("td");
+      var colorBox1 = document.createElement("div");
+      var colorBox2 = document.createElement("div");
+
+      colorNameCell.textContent = colorName;
+      hex1Cell.textContent = mapping[0];
+      hex2Cell.textContent = mapping[1];
+      colorBox1.style.backgroundColor = mapping[0];
+      colorBox2.style.backgroundColor = mapping[1];
+
+      colorBox1.classList.add("color-box");
+      colorBox2.classList.add("color-box");
+
+      color1Cell.appendChild(colorBox1);
+      color2Cell.appendChild(colorBox2);
+
+      colorRow.appendChild(colorNameCell);
+      colorRow.appendChild(hex1Cell);
+      colorRow.appendChild(hex2Cell);
+      colorRow.appendChild(color1Cell);
+      colorRow.appendChild(color2Cell);
+
+      tableBody.appendChild(colorRow);
+    }
+
+    function changeBackgroundColor(value) {
+      var body = document.body;
+      var color = interpolateColor(value, [255, 255, 255], [0, 0, 0]);
+      body.style.backgroundColor = 'rgb(' + color.join(',') + ')';
+    }
+
+    function interpolateColor(factor, c1, c2) {
+      var color = [];
+      for (var i = 0; i < c1.length; i++) {
+        color[i] = Math.round(c1[i] * (1 - factor) + c2[i] * factor);
+      }
+      return color;
+    }
+  </script>
+</body>
+</html>
