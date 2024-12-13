@@ -1,0 +1,18 @@
+@keyframes play38 {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: -16416px 0px;
+  }
+}
+.shapeshifter {
+  animation-duration: 1250ms;
+  animation-timing-function: steps(38);
+  width: 432px;
+  height: 432px;
+  background-repeat: no-repeat;
+}
+.shapeshifter.play {
+  animation-name: play38;
+}
