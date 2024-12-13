@@ -1,0 +1,18 @@
+@keyframes play72 {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: -31104px 0px;
+  }
+}
+.shapeshifter {
+  animation-duration: 1200ms;
+  animation-timing-function: steps(72);
+  width: 432px;
+  height: 432px;
+  background-repeat: no-repeat;
+}
+.shapeshifter.play {
+  animation-name: play72;
+}

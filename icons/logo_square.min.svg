@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="512"
+   height="512"
+   viewBox="0 0 512 512"
+   fill="none"
+   version="1.1"
+   id="svg6"
+   sodipodi:docname="logo_square.min.svg"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview6"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="2.2675781"
+     inkscape:cx="256"
+     inkscape:cy="256"
+     inkscape:window-width="2560"
+     inkscape:window-height="1412"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg6" />
+  <rect
+     width="512"
+     height="512"
+     fill="url(#paint0_linear_70_1277)"
+     id="rect1" />
+  <g
+     filter="url(#filter0_d_70_1277)"
+     id="g1">
+    <path
+       d="M 262.432,64.0532 C 153.95859,61.444613 63.291173,155.06881 74.9958,267.118 c 3.633,34.779 17.1012,67.803 38.8272,95.203 -7.5933,13.22733 -15.135126,26.4841 -22.6907,39.733 -7.856379,13.66638 2.543425,29.96289 17.3547,29.946 H 256.486 C 358.84,432 443.127,348.256 441.989,245.905 440.86068,147.04024 361.27576,66.438218 262.432,64.0532 Z M 202.629,309.006 c 0,14.22771 -11.59074,25.818 -25.818,25.818 -14.21957,-0.0251 -25.80239,-11.63751 -25.773,-25.875 V 187.047 c 0,-14.22628 11.5889,-25.818 25.819,-25.818 14.21652,0.0125 25.795,11.59775 25.795,25.818 z m 81.159,0 c 0,14.22771 -11.59074,25.818 -25.818,25.818 -14.23034,0 -25.819,-11.59196 -25.819,-25.818 v -70.415 c 0,-14.22887 11.59121,-25.818 25.819,-25.818 14.22568,0 25.818,11.58842 25.818,25.818 z m 81.159,-0.057 c 0,14.22791 -11.59125,25.817 -25.819,25.817 -14.22319,-0.0125 -25.80077,-11.60082 -25.807,-25.817 V 187.047 c 0.006,-14.22926 11.60133,-25.818 25.83,-25.818 14.21914,0.0125 25.796,11.59897 25.796,25.818 z"
+       fill="url(#paint1_linear_70_1277)"
+       id="path1"
+       sodipodi:nodetypes="cscccscccccscccssssssssccccss" />
+  </g>
+  <defs
+     id="defs6">
+    <filter
+       id="filter0_d_70_1277"
+       x="33.8524"
+       y="43.9262"
+       width="448.295"
+       height="448.295"
+       filterUnits="userSpaceOnUse"
+       color-interpolation-filters="sRGB">
+      <feFlood
+         flood-opacity="0"
+         result="BackgroundImageFix"
+         id="feFlood1" />
+      <feColorMatrix
+         in="SourceAlpha"
+         type="matrix"
+         values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+         result="hardAlpha"
+         id="feColorMatrix1" />
+      <feOffset
+         dy="20.0738"
+         id="feOffset1" />
+      <feGaussianBlur
+         stdDeviation="20.0738"
+         id="feGaussianBlur1" />
+      <feComposite
+         in2="hardAlpha"
+         operator="out"
+         id="feComposite1" />
+      <feColorMatrix
+         type="matrix"
+         values="0 0 0 0 0.342831 0 0 0 0 0.236667 0 0 0 0 0.8875 0 0 0 0.5 0"
+         id="feColorMatrix2" />
+      <feBlend
+         mode="normal"
+         in2="BackgroundImageFix"
+         result="effect1_dropShadow_70_1277"
+         id="feBlend2" />
+      <feBlend
+         mode="normal"
+         in="SourceGraphic"
+         in2="effect1_dropShadow_70_1277"
+         result="shape"
+         id="feBlend3" />
+    </filter>
+    <linearGradient
+       id="paint0_linear_70_1277"
+       x1="430.85"
+       y1="558.85"
+       x2="81.15"
+       y2="-46.85"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0.13"
+         stop-color="#553BFF"
+         id="stop3" />
+      <stop
+         offset="0.86"
+         stop-color="#9064FF"
+         id="stop4" />
+    </linearGradient>
+    <linearGradient
+       id="paint1_linear_70_1277"
+       x1="257.993"
+       y1="432"
+       x2="257.993"
+       y2="63.9957"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         stop-color="#E1D6FF"
+         id="stop5" />
+      <stop
+         offset="1"
+         stop-color="white"
+         id="stop6" />
+    </linearGradient>
+  </defs>
+</svg>
